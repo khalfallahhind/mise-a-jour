@@ -1,0 +1,10 @@
+const {ObjectID} = require('mongodb');
+const {mongoose} = require('./../server/db/mongoose');
+const {Todo} = require('./../server/models/todo');
+const {User} = require('./../server/models/user');
+//Todo.remove({}).then((result)=>{
+   // console.log(result);
+//});
+Todo.findByIdAndRemove('5bf67da29a7a36d8350aa7d5').then((todo) => {
+    console.log(todo);
+});
